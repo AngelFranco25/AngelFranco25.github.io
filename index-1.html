@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My Countdown</title>
+    <script>
+        // Countdown from 10 to 1 seconds
+        var count = 10;
+        var countdown = setInterval(function() {
+            count--;
+            if (count <= 0) {
+                clearInterval(countdown);
+                document.getElementById("Displaycountdown").innerHTML = "";
+                document.getElementById("Displaycountdown").innerHTML = "Countdown Complete";
+            } else{
+                document.getElementById("Displaycountdown").innerHTML = count;
+            }
+        }, 1000);
+    </script>
+</head>
+<body>
+    <h2>This is My Countdown Demo!</h2>
+    <!--Button to control the countdown-->
+    <button onclick="StartCountdown()">StartCountdown</button>
+    <!--This will display the countdown-->
+    <p id="DisplayCountdown">10</p>
+    <p id="DisplayMessages">Waiting to start countdown...</p>
+</body>
+</html>
